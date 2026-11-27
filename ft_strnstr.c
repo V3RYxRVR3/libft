@@ -6,7 +6,7 @@
 /*   By: sofdomin <sofdomin@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/11/16 11:32:51 by sofdomin          #+#    #+#             */
-/*   Updated: 2026/11/16 11:32:54 by sofdomin         ###   ########.fr       */
+/*   Updated: 2026/11/27 11:49:17 by sofdomin         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		while (i + j < len && big[i + j] && big[i + j] == little[j])
 			j++;
 		if (little[j] == '\0')
-			return ((char *)(big + i));
+			return ((char *)(&big[i]));
 		i++;
 	}
 	return (NULL);
